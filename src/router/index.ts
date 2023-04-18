@@ -1,4 +1,4 @@
-import { createRouter, createMemoryHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Portfolio from '../views/Portfolio.vue'
@@ -7,10 +7,6 @@ import Practice from '../views/Practice.vue'
 
 const NotFound = { template: "<div>Not Found</div>" }
 const routes = [
-  // {
-  //   path: '/',
-  //   redirect: { name: 'Home' }
-  // },
   {
     path: '/',
     name: 'Home',
@@ -35,7 +31,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createMemoryHistory(process.env.BASE_URL),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 
